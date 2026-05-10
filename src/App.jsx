@@ -1,13 +1,18 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import './App.css'
+import kashish1 from './assets/Whatsapp/kashish1.jpeg'
+import kashish2 from './assets/Whatsapp/kashish2.jpeg'
+import kashish3 from './assets/Whatsapp/kashish3.jpeg'
+import kashish4 from './assets/Whatsapp/kashish4.jpeg'
+import kashish5 from './assets/Whatsapp/kashish5.jpeg'
 
 /* ──────────── CONSTANTS ──────────── */
 const PHOTOS = [
-  { src: '/kashish1.jpeg', caption: 'My Beautiful Kashish 💖', sub: 'The prettiest smile' },
-  { src: '/kashish2.jpeg', caption: 'You Light Up My World ✨', sub: 'Every moment is magical' },
-  { src: '/kashish3.jpeg', caption: 'My Favorite Person 🌸', sub: 'Always & forever' },
-  { src: '/kashish4.jpeg', caption: 'Pure Sunshine ☀️', sub: 'Radiating happiness' },
-  { src: '/kashish5.jpeg', caption: 'My Heart 💕', sub: 'You complete me' },
+  { src: kashish1, caption: 'My Beautiful Kashish 💖', sub: 'The prettiest smile' },
+  { src: kashish2, caption: 'You Light Up My World ✨', sub: 'Every moment is magical' },
+  { src: kashish3, caption: 'My Favorite Person 🌸', sub: 'Always & forever' },
+  { src: kashish4, caption: 'Pure Sunshine ☀️', sub: 'Radiating happiness' },
+  { src: kashish5, caption: 'My Heart 💕', sub: 'You complete me' },
 ]
 
 const WISHES = [
@@ -234,7 +239,7 @@ export default function App() {
       {/* ═══ HERO ═══ */}
       <section className="hero-section" id="hero">
         <div className="hero-photo-frame animate-on-scroll" style={{ animationDelay: '0.2s' }}>
-          <img src="/kashish1.jpeg" alt="Kashish" />
+          <img src={kashish1} alt="Kashish" />
         </div>
         <div className="hero-badge animate-on-scroll">✨ A Special Day ✨</div>
         <h1 className="hero-title animate-on-scroll">
@@ -359,7 +364,7 @@ export default function App() {
         <div className="animate-on-scroll">
           {!candlesBlown && <div className="candles-lit">🕯️🕯️🕯️🕯️🕯️</div>}
           {candlesBlown && <div className="candles-lit">🎉🎊✨💖🎉</div>}
-          <img className="cake-image" src="/cake.png" alt="Birthday Cake" />
+          {/* <img className="cake-image" src="cake.png" alt="Birthday Cake" /> */}
           {!candlesBlown ? (
             <button className="blow-candle-btn" onClick={blowCandles}>
               🌬️ Blow the Candles!
@@ -378,8 +383,8 @@ export default function App() {
           Happy Birthday Kashish! 🎂💖
         </h1>
         <p className="final-message animate-on-scroll">
-          You are loved more than words can ever express. Thank you for being you — 
-          the most wonderful, kind, beautiful, and amazing person in this world. 
+          You are loved more than words can ever express. Thank you for being you —
+          the most wonderful, kind, beautiful, and amazing person in this world.
           I love you to the moon and back! 🌙
         </p>
         <div className="final-heart" onClick={heartClick}>
